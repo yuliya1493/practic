@@ -1,0 +1,41 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  	<body>
+  		<script>
+
+           'use strict';
+
+           let arr2 = [];
+           
+           function func(arr) {
+             for (let elem of arr) {   
+               if (typeof elem === 'object') {
+                  func(elem);
+                } else {
+                arr2.push(elem);
+               }
+             }
+             return arr2;
+           }
+
+           console.log(func([3, [2, 7, 8], [7, 1, [5, [6, 9]]]]));
+            
+            
+            /*function func(arr) {
+            let arr2 = arr.flat(Infinity);
+              return arr2;
+            }
+            console.log(func([3, [2, 7, 8], [7, 1, [5, [6, 9]]]]));
+            */
+
+
+            
+
+
+
+  		</script>
+  	</body>
+  </head>
+</html>
